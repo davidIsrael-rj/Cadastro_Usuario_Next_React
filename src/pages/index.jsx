@@ -1,17 +1,18 @@
 import Link from 'next/link'
+import Navegador from '../components/Navegador'
 
-export default function Inicio(){
+export default function Inicio() {
     return (
-        <div>
-            <h1>Fundamentos de Next.js & React</h1>
-            <h2>Vamos estudar esse framework</h2>
-            <Link href="/estiloso">
-                Estiloso
-                </Link>
-                <br />
-            <Link href="/exemplo">
-                Exemplo
-            </Link>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            height: '100vh'
+        }}>
+            <Navegador texto="Estiloso" destino="/estiloso" cor="#FF00FF"/>
+            <Navegador texto="Exemplo" destino="/exemplo" cor="#00FA9A"/>
+            <Navegador texto="JSX" destino="/jsx" cor="crimson"/>
         </div>
     )
 }
